@@ -1,0 +1,48 @@
+<div class="container">
+    <h3>Ajout d'un jeu</h3>
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label> Identifiant du jeu </label>
+            <input type="number" class="form-control" name="id" formControlName="id" readonly>
+        </div>
+        <div>
+            <label>Nom</label>
+            <input type="text" class="form-control" name="name" formControlName="name">
+        </div>
+        <div>
+            <label>Prix</label>
+            <input type="number" class="form-control" name="price" formControlName="price">
+        </div>
+        <div>
+            <label> Made In </label>
+            <label>
+                <input type="radio" name="madeIn" value="Tunisie" formControlName="madeIn">Tunisie
+            </label>
+            <label>
+                <input type="radio" name="madeIn" value="Autre" formControlName="madeIn">Autre
+            </label>
+        </div>
+        <div>
+            <label>Catégorie</label>
+            <select name="selCategories" formControlName="category" class="form-select">
+                @for(category of categories; track $index){
+                <option [value]="category">{{category}}</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="isNew" formControlName="isNew"> Nouveau
+            </label>
+        </div>
+        <div>
+            <h5>Définition des points de vente</h5>
+                   </div>
+        <input type="submit" class="btn btn-success" value="Ajouter" >
+        <input type="button" class="btn btn-warning" (click)="onResetForm()" value="Effacer">
+    </form>
+    <p>
+        {{games |json}}
+    </p>
+</div>
+

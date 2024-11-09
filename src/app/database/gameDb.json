@@ -1,0 +1,27 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "name": "Monopoly",
+      "price": 30,
+      "madeIn": "Tunisie",
+      "category": "Jeux de société",
+      "isNew": false,
+      "shops": [
+        "Tunis",
+        "Sousse"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Uno",
+      "price": 0.3,
+      "madeIn": "Tunisie",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [
+        "Sfax"
+      ]
+    }
+  ]
+}
